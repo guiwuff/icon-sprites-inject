@@ -7,7 +7,7 @@
 Includes the script in your HTML head.
 
 ``` html
-<script src="https://cdn.jsdelivr.net/gh/guiwuff/icon-sprites-inject@1.0.0/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/guiwuff/icon-sprites-inject@latest/dist/index.js"></script>
 ```
 The script will automatically `inject` an SVG documentElement at the bottom of your HTML document with `display:none` in the `style` properties.
 
@@ -40,7 +40,7 @@ By default it will import a `sprites.svg` file inside `assets` directory. You ca
 
 `esm` and `commonjs` module is available in `dist` with suffix format `index.esm.js` and `index.cjs.js`
 
-Include the module in yout node using `npm i https://cdn.jsdelivr.net/gh/guiwuff/icon-sprites-inject@1.0.0/dist/` and use it in your app through `spriteInject()`
+Include the module in yout node using `npm i https://cdn.jsdelivr.net/gh/guiwuff/icon-sprites-inject@latest/dist/` and use it in your app through `spriteInject()`
 
 ``` node
 import {spriteInject} from 'icon-sprites-inject';
