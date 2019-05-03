@@ -1,8 +1,8 @@
 {
   "dist/index.js": {
-    "bundled": 3931,
-    "minified": 1128,
-    "gzipped": 625
+    "bundled": 4053,
+    "minified": 1233,
+    "gzipped": 697
   },
   "dist/index.esm.js": {
     "bundled": 3653,
