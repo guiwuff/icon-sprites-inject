@@ -32,5 +32,10 @@
     "bundled": 3744,
     "minified": 1243,
     "gzipped": 665
+  },
+  "dist/index-dev.js": {
+    "bundled": 4053,
+    "minified": 1239,
+    "gzipped": 698
   }
 }

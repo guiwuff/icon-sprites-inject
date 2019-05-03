@@ -31,6 +31,25 @@ const production = [
     ]
   },
   {
+    input: 'src/index-dev.ts',
+    output: {
+      format: 'iife',
+      file: 'dist/index-dev.js',
+      sourcemap: true,
+      name: 'devIife'
+    },
+    plugins: [
+      sizeSnapshot(),
+      copy({targets: ['src/assets/sprites-dev.svg'], outputFolder: 'dist/assets/'}),
+      commonjs(),
+      resolve(),
+      globals(),
+      builtins(),
+      typescript(),
+      clean()
+    ]
+  },
+  {
     input: 'src/sprite-injector.ts',
     output: [
      { format: 'esm', file: 'dist/index.esm.js', sourcemap: true, browser: true },
