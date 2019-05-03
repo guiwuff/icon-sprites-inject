@@ -10,34 +10,47 @@ import serve from 'rollup-plugin-serve';
 
 const env = process.env.NODE_ENV;
 
-const production = {
-  input: './src/sprite-injector.ts',
-  output: [
-    {
+const production = [
+  {
+    input: 'src/index.ts',
+    output: {
       format: 'iife',
       file: 'dist/index.js',
       sourcemap: true,
-      name: 'spriteInjector'
-    },{
-      format: 'esm',
-      file: 'dist/index.esm.js',
-      sourcemap: true,
-      browser: true }
-  ],
-  plugins: [
-    sizeSnapshot(),
-    copy({ targets: ['src/assets/sprites.svg'], outputFolder: 'dist/assets/'}),
-    commonjs(),
-    resolve(),
-    globals(),
-    builtins(),
-    typescript(),
-    clean(),
-  ]
-}
+      name: 'main'
+    },
+    plugins: [
+      sizeSnapshot(),
+      copy({targets: ['src/assets/sprites.svg'], outputFolder: 'dist/assets/'}),
+      commonjs(),
+      resolve(),
+      globals(),
+      builtins(),
+      typescript(),
+      clean()
+    ]
+  },
+  {
+    input: 'src/sprite-injector.ts',
+    output: [
+     { format: 'esm', file: 'dist/index.esm.js', sourcemap: true, browser: true },
+     { format: 'cjs', file: 'dist/index.cjs.js', sourcemap: true}
+    ],
+    plugins: [
+      sizeSnapshot(),
+      copy({ targets: ['src/assets/sprites.svg'], outputFolder: 'dist/assets/'}),
+      commonjs(),
+      resolve(),
+      globals(),
+      builtins(),
+      typescript(),
+    ]
+  }
+]
+
 
 const development = {
-  input: './src/sprite-injector.ts',
+  input: './src/index.ts',
   output: [
     { name: 'main',
       format: 'iife',

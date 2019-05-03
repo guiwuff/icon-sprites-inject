@@ -1,7 +1,6 @@
 // This will automatically inject the SVG symbol defs
 // to be use via <use>
 
-const SVGSpriteInject = injectSprites(document);
 
 function injectSprites(document: HTMLDocument) {
   const CREATE_ELEMENT = 'createElement';
@@ -105,5 +104,8 @@ function injectSprites(document: HTMLDocument) {
   return SVGSpriteInject;
 }
 
-// Inject the sprites
-SVGSpriteInject('assets/sprites.svg', {});
+const SVGSpriteInject = injectSprites(document);
+
+export const spriteInject = (path: string, options = {}) => {
+  SVGSpriteInject(path, options);
+}

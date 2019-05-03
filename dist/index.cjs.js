@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 // This will automatically inject the SVG symbol defs
 // to be use via <use>
 function injectSprites(document) {
@@ -98,5 +102,5 @@ const spriteInject = (path, options = {}) => {
     SVGSpriteInject(path, options);
 };
 
-export { spriteInject };
-//# sourceMappingURL=index.esm.js.map
+exports.spriteInject = spriteInject;
+//# sourceMappingURL=index.cjs.js.map
