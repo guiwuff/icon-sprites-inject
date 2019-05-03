@@ -1,6 +1,6 @@
 {
   "name": "icon-sprites-inject",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Injecting the SVG Sprites into the html file.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
